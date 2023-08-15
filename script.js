@@ -72,21 +72,3 @@ form.addEventListener('submit', function (e) {
   e.preventDefault();
   checkRequired(["firstname", "lastname", "email", "password"]);
 });
-
-
-function submitForm() {
-  var phoneNumber = document.getElementById('number').value;
-
-  var access_key = 'e0fdef3e83ea1f7bb7cdd3840f88a29c'; // Replace with your API access key
-
-  fetch('http://apilayer.net/api/validate?access_key=' + access_key + '&number=' + phoneNumber)
-    .then(response => response.json())
-    .then(json => {
-      // Access and use your preferred validation result objects
-      console.log(json.valid)
-     
-    })
-    .catch(error => {
-      return 'Error occurred while validating the phone number.';
-    });
-}
