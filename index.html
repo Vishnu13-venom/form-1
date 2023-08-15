@@ -40,13 +40,18 @@
                             <small>Error message</small>
                           </div>
                           <div class="form-control">
+                            <input type="number" id="number" placeholder="Phone Number"  />
+                            <small>Error message</small>
+                          </div>
+                          <div class="form-control">
                             <input type="password" id="password" placeholder="Password *"/>
                             <small>Error message</small>
                           </div>
-                          <button type="submit">CLAIM YOUR FIRST TRIAL</button>
+                          <button type="submit" onclick="submitForm()">CLAIM YOUR FIRST TRIAL</button>
                           <p class="policy">By clicking the button you are agreeing to our <span class="terms"><a class="terms" href='javascript:void(0);'>Terms and Service</a> </span></p>
 
                         </form>
+                        <div id="validationResult"></div>
                       </div>
                 </div>
             </div>
