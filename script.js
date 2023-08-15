@@ -83,15 +83,10 @@ function submitForm() {
     .then(response => response.json())
     .then(json => {
       // Access and use your preferred validation result objects
-      var validationResult = '';
-      validationResult += 'Phone Number: ' + phoneNumber + '<br>';
-      validationResult += 'Valid: ' + json.valid + '<br>';
-      validationResult += 'Country Code: ' + json.country_code + '<br>';
-      validationResult += 'Carrier: ' + json.carrier + '<br>';
-
-      document.getElementById('validationResult').innerHTML = validationResult;
+      console.log(json.valid)
+     
     })
     .catch(error => {
-      document.getElementById('validationResult').innerHTML = 'Error occurred while validating the phone number.';
+      return 'Error occurred while validating the phone number.';
     });
 }
